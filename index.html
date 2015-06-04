@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Alpha by HTML5 UP</title>
+		<title>Jessica Yung</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -47,10 +47,28 @@
 			<!-- Banner -->
 				<section id="banner">
 					<h2>Alpha</h2>
-					<p>Another fine responsive site template freebie by HTML5 UP.</p>
+					<p id ="change-me">Another fine responsive site template freebie by HTML5 UP.</p>
 					<ul class="actions">
-						<li><a href="#" class="button special">Sign Up</a></li>
-						<li><a href="#" class="button">Learn More</a></li>
+						<li><a href="#" class="button special" onclick="changeMe()">Change Text</a>
+							<script type="text/javascript">
+								function changeMe() {
+									document.getElementById('change-me').innerHTML = 'I\'ve changed!'
+
+									/**  var changeText = document.getElementById('change-me');
+									if (changeText.src.match("changed")) {
+										document.getElementById('change-me').innerHTML = 'Another fine responsive site template freebie by HTML5 UP.';
+									} else {
+										document.getElementById('change-me').innerHTML = 'I\'ve changed!';
+									}; **/
+									
+								}
+							</script>
+						</li>
+						<li><a href="#" class="button">Learn More</a></li> 
+						<!-- <li><button type="button" class="button"
+						onclick= "changeMe()" >
+						Change the text!</button>-->
+						
 					</ul>
 				</section>
 
