@@ -54,7 +54,7 @@
 										<p>Hand-coded charts about economics.</p>
 									</header>
 									
-									<div id="interwar-monthly-real-gdp-growth" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+									<div id="interwar-qoq-real-gdp-growth" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 									
 
 
@@ -168,7 +168,7 @@
 			                [Date.UTC(1938,7,1),0.566871778303205]
             ];
 
-        $('#interwar-monthly-real-gdp-growth').highcharts({
+        $('#interwar-qoq-real-gdp-growth').highcharts({
             chart: {
                 zoomType: 'x'
             },
@@ -184,8 +184,13 @@
             },
             yAxis: {
                 title: {
-                    text: 'Real GDP QoQ Growth (%)'
+                    text: 'Real GDP QoQ Growth'
+                },
+                labels: {
+                formatter: function () {
+                    return this.value + '%';
                 }
+            }
             },
             tooltip: {
                 valueDecimals: 2,
